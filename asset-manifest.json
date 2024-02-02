@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/spring-crud/static/css/main.d839c856.css",
+    "main.js": "/spring-crud/static/js/main.e1e99aea.js",
+    "index.html": "/spring-crud/index.html",
+    "main.d839c856.css.map": "/spring-crud/static/css/main.d839c856.css.map",
+    "main.e1e99aea.js.map": "/spring-crud/static/js/main.e1e99aea.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d839c856.css",
+    "static/js/main.e1e99aea.js"
+  ]
+}
