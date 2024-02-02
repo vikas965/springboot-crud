@@ -28,6 +28,7 @@ const EditUser = () => {
   }
 
 const {id} =useParams();
+
   const onSubmit= async (e)=>{
     e.preventDefault();
     await axios.put(`http://localhost:8080/user/${id}`,user)
