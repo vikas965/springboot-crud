@@ -1,13 +1,58 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.navclass{
+    text-decoration: none;
+    color: black;
+    margin-right: 40px;
+    margin-left: 40px;
+    padding: 8px;
+    border-radius: 5px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.active{
+    background-color: rgb(82, 197, 182);
+}
+
+.list-container{
+    border: solid 1px black;
+    padding: 30px;
+    border-radius: 7px;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.list-container button{
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+.lists{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.table-home{
+    width: 100%;
+    padding: 30px;
+}
+
+
+.form-inputs-add{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    width: 100%;
+    padding: 30px;
+}
+
+.form-inputs-add input{
+    padding: 15px;
+    border-radius: 8px;
 }

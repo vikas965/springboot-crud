@@ -1,0 +1,25 @@
+.card-container{
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:3rem;
+}
+
+.container1{
+    width: 100%;
+    display: flex;
+    padding: 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imgstyle{
+    width: 450px;
+    height: 280px;
+    border-radius: 10px;
+}
