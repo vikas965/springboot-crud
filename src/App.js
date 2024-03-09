@@ -1,49 +1,39 @@
 import React from "react";
-// import Navbar from "./navbar";
-
 import "./index.css"
-// import Todolist from "./Todolist";
-import Home from "./components/Home";
-import Contact from "./components/Contact";
-import About from "./components/About";
-import Navbar from "./components/Navbar";
-import Notfound from "./components/Notfound";
-import { Routes,Route } from "react-router-dom";
-import Success from "./components/Success";
-import Projects from "./components/Projects";
-import FeatureProject  from "./components/FeatureProject";
-import Newproject from "./components/Newproject";
-import Users from "./components/Users";
-import Userview from "./components/Userview";
 import ViewUser from "./Users/ViewUser";
 import EditUser from "./Users/EditUser";
 import AddUser from "./Users/AddUser";
-
+// import Home from "./Users/Home";
+import { Route,Routes } from "react-router-dom";
+import Login from "./Users/Login";
+import AddNotes from "./Users/AddNotes";
+import Shownotes from "./Users/Shownotes";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import EditNotes from "./Users/EditNotes";
+import Showdata from "./Users/Showdata";
+import Visuals from "./Users/Visuals";
 const App = () => {
 
     
     return (
         <section className="App">
-            <Navbar/>
-          <Routes>
-            
-            <Route path="/"  element={<Home/>}/>
-            <Route path="/About"  element={<About/>}/>
-            <Route path="/Contact"  element={<Contact/>}/>
-            <Route path="/Success"  element={<Success/>}/>
-            <Route path="/projects"  element={<Projects/>}>
-                <Route index element={<FeatureProject/>}/>
-                <Route path="featured" element={<FeatureProject/>}/>
-                <Route path="new" element={<Newproject/>}/>
-            </Route>
-            <Route path="/users"  element={<Users/>}/>
-            <Route path="/users/:Userid"  element={<Userview/>}/>
 
 
+<ToastContainer />
+          <Routes>            
+            <Route path="/"  element={<Shownotes/>}/>
+           
             <Route path="/viewuser/:id"  element={<ViewUser/>}></Route>
             <Route path="/edituser/:id"  element={<EditUser/>}></Route>
-            <Route path="/adduser"  element={<AddUser/>}></Route>
-            <Route path="*"  element={<Notfound/>}/>
+            <Route path="/editnotes/:id"  element={<EditNotes/>}></Route>
+            <Route path="/register"  element={<AddUser/>}></Route>
+            <Route path="/login"  element={<Login/>}></Route>
+            <Route path="/addnotes"  element={<AddNotes/>}></Route>
+            {/* <Route path="/shownotes"  element={<Shownotes/>}></Route> */}
+            <Route path="/showdata"  element={<Showdata/>}></Route>
+            <Route path="/visuals"  element={<Visuals/>}></Route>
+            {/* <Route path="*"  element={<Notfound/>}/> */}
           </Routes>
 
             

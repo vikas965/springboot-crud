@@ -31,12 +31,14 @@ const {id} =useParams();
 
   const onSubmit= async (e)=>{
     e.preventDefault();
-    await axios.put(`http://localhost:8080/user/${id}`,user)
+    // await axios.put(`http://localhost:8080/user/${id}`,user)
+    await axios.put(`http://localhost:3001/user/${id}`,user)
     navigate("/")
 }
 
 const loadUser = async ()=>{
-  const result = await axios.get(`http://localhost:8080/user/${id}`)
+  // const result = await axios.get(`http://localhost:8080/user/${id}`)
+  const result = await axios.get(`http://localhost:3001/user/${id}`)
   setuser(result.data)
 }
   const {name,username,email} = user;

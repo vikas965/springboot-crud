@@ -8,7 +8,8 @@ const AddUser = () => {
   const [user ,setuser]= useState({
     name:"",
     username:"",
-    email:""
+    email:"",
+    password:""
   })
 
   const ChangeInput = (e)=>{
@@ -22,21 +23,23 @@ const AddUser = () => {
 
   const onSubmit= async (e)=>{
     e.preventDefault();
-    await axios.post("http://localhost:8080/user",user)
+    // await axios.post("http://localhost:8080/user",user)
+    await axios.post("http://localhost:3001/user",user)
     navigate("/")
 }
-  const {name,username,email} = user;
-  const Navigatetohome = useNavigate();
+  const {name,username,email,password} = user;
+  // const Navigatetohome = useNavigate();
   return (
     <div>
         <form action="" onSubmit={onSubmit}>
           <div className="form-inputs-add">
-            <h1>Add User</h1>
-          <input name='name' value={name} type="text" placeholder='Name' onChange={ChangeInput} />
-          <input name='username' value={username} type="text" placeholder='Username ' onChange={ChangeInput}/>
-          <input name='email' value={email} type="email" placeholder='Email' onChange={ChangeInput} />
-          <button onClick={()=>Navigatetohome('../')} className="btn btn-danger">Cancel</button>
-          <button className='btn btn-primary'>Submit</button>
+            <h1 style={{color:"whitesmoke"}}>Register</h1>
+          <input className='inp' name='name' value={name} type="text" placeholder='Name' onChange={ChangeInput} />
+          <input  className='inp' name='username' value={username} type="text" placeholder='Username ' onChange={ChangeInput}/>
+          <input  className='inp' name='email' value={email} type="email" placeholder='Email' onChange={ChangeInput} />
+          <input  className='inp' name='password' value={password} type="password" placeholder='password' onChange={ChangeInput} />
+          {/* <button onClick={()=>Navigatetohome('../')} className="btn btn-danger">Cancel</button> */}
+          <button className='btn btn-primary'>Register</button>
           </div>
         </form>
       
